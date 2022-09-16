@@ -1,0 +1,13 @@
+<%= simple_form_for flat do |f| %>
+  <div class="form-inputs">
+    <%= f.input :name, label: 'Name:' %>
+    <%= f.input :address, label: 'Address:' %>
+    <%= f.input :description, label: 'Description:' %>
+    <%= f.input :price_per_night, label: 'Price per night:' %>
+    <%= f.input :number_of_guests, label: 'Number of guests:' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary" %>
+  </div>
+<% end %>

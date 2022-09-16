@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+.navbar p {
+  display: inline-block;
+}
+
+i {
+  font-size: 30px;
+}
+
+.icon {
+  font-size: 30px;
+  text-decoration: none;
+}

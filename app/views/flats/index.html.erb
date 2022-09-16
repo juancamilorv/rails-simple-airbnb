@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Flats</h1>
+
+<div class="row row-cols-3">
+  <% @flats.each do |flat| %>
+    <div class="col">
+      <div class="card">
+        <%= image_tag "moon.jpeg", alt: "card picture", height: 200, width: "auto" %>
+        <div class="card-body">
+          <h5 class="card-title mb-3"><%= flat.name %></h5>
+          <h6 class="card-subtitle mb-3"><%= flat.address %></h6>
+          <i class="card-text fa-solid fa-people-line me-2"><%= flat.number_of_guests %></i>
+          <i class="card-text fa-solid fa-euro-sign me-2"><%= flat.price_per_night %></i>
+          <%= link_to "More info", flat_path(flat) %>
+          <%= link_to "Edit", edit_flat_path(flat) %>
+          <%= link_to "Remove", flat, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
